@@ -9,9 +9,3 @@ ORDER BY buyer_id asc
 
 
 # 유저를 찾아라, 날짜 조인하고 2019년에 샀던 사람중에 주문 수를 구해라, 순서는 자유
-
-# SELECT u.user_id AS buyer_id, join_date, COUNT(order_date) AS orders_in_2019 
-# FROM Users as u
-# LEFT JOIN Orders as o
-# ON u.user_id = o.buyer_id AND YEAR(order_date) = '2019'
-# GROUP BY u.user_id
