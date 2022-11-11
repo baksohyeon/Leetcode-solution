@@ -3,6 +3,7 @@
  * @return {number}
  */
 
+
 // 깊은 복사 말고 얕은 복사 써서 문제 풀이할 것 
 // Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
 const removeDuplicates = (nums) => {
@@ -17,5 +18,5 @@ const removeDuplicates = (nums) => {
   }
 
   nums = nums.slice(0, index + 1);
-  return index + 1;
+  return nums.length;
 };
