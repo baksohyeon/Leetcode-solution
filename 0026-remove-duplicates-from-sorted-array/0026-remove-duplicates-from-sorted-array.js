@@ -13,8 +13,9 @@ const removeDuplicates = (nums) => {
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] != nums[index]) {
       nums[++index] = nums[i];
-      console.log(nums);
     }
   }
+
+  nums = nums.slice(0, index + 1);
   return index + 1;
 };
