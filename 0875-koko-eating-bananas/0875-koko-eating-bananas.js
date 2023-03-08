@@ -5,13 +5,12 @@
  */
 const minEatingSpeed = (piles, h) => {
   // k [consumed banana/hr]
-  const sortedBananaPiles = piles.sort((a, b) => a - b);
   let start = 0;
-  let end = sortedBananaPiles[sortedBananaPiles.length - 1];
+  let end = Math.max(...piles);
 
   while (start <= end) {
     const mid = Math.floor((end + start) / 2);
-    const expectedEatingHour = sortedBananaPiles.reduce((acc, cur) => {
+    const expectedEatingHour = piles.reduce((acc, cur) => {
       return acc + Math.ceil(cur / mid);
     }, 0);
     if (expectedEatingHour > h) {
