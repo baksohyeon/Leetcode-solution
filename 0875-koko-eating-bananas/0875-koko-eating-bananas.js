@@ -10,7 +10,7 @@ const minEatingSpeed = (piles, h) => {
   let end = sortedBananaPiles[sortedBananaPiles.length - 1];
 
   while (start <= end) {
-    const mid = start + Math.floor((end - start) / 2);
+    const mid = Math.floor((end + start) / 2);
     const expectedEatingHour = sortedBananaPiles.reduce((acc, cur) => {
       return acc + Math.ceil(cur / mid);
     }, 0);
