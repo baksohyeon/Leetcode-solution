@@ -21,7 +21,6 @@ const buildTree = (inorder, postorder) => {
     return null;
   }
 
-  // const currentVal = postorder[postorder.length - 1];
   const currentVal = postorder.pop();
   const splitIndex = inorder.indexOf(currentVal);
 
